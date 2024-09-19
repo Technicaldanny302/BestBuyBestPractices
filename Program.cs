@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 using System.Data;
 using Dapper;
+using System.IO;
 
 namespace BestBuyBestPractices
 {
@@ -22,7 +23,7 @@ namespace BestBuyBestPractices
             departmentRepo.InsertDepartments("Johns New Department");
 
             var departments = departmentRepo.GetAllDepartments();
-
+             
             foreach (var department in departments)
             {
                 Console.WriteLine(department.DepartmentID);
